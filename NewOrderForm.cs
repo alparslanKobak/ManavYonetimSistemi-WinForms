@@ -18,6 +18,8 @@ namespace MarketYönetimSistemi
         Functions _func = new Functions();
         ProductCrud _productCrud = new ProductCrud();
         OrderCruds _orderCruds = new OrderCruds();
+        SellProductCruds _sellProductCruds = new SellProductCruds();
+        int _orderId = 0;
         int _id=0;
         public NewOrderForm()
         {
@@ -34,6 +36,12 @@ namespace MarketYönetimSistemi
             choosenOnePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             choosenOneProductLabel.Visible = true;
             choosenOneProductLabel.Text = product.Name;
+
+            addNewOrderNumericUpDown.Maximum = product.Stock;
+            addNewOrderNumericUpDown.Minimum = 1;
+            addNewOrderNumericUpDown.Value = 1;
+
+
         }
 
         private void NewOrderForm_Load(object sender, EventArgs e)
@@ -41,6 +49,31 @@ namespace MarketYönetimSistemi
             choosenOnePictureBox.ImageLocation = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBr-qSjD0HROdf9GzKfBRvDXYA_BUKMlgXBg&usqp=CAU";
             choosenOneProductLabel.Visible = false;
             _func.GetAllProductsToDgv(productsDataGridView);
+
+            orderCardListView.View = View.Details;
+            //orderCardListView.GridLines = true;
+            orderCardListView.FullRowSelect = true;
+            orderCardListView.HideSelection = false;
+            orderCardListView.MultiSelect = false;
+            //orderCardListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
+            orderCardListView.Columns.Add("Ürün ID", 100);
+            orderCardListView.Columns.Add("Ürün Adı", 100);
+            orderCardListView.Columns.Add("Ürün Fiyatı", 100);
+            orderCardListView.Columns.Add("Ürün Adedi", 100);
+            orderCardListView.Columns.Add("Ürün Toplam Fiyatı", 100);
+            
+
+            Order order = new Order()
+            {
+               UserId=LoginForm._id,
+               
+            };
+
+            _orderCruds.Add(order);
+            _orderId = order.Id;
+
+
         }
 
         private void addToCardButton_Click(object sender, EventArgs e)
@@ -51,8 +84,26 @@ namespace MarketYönetimSistemi
             }
             else
             {
+
+                SellProduct sellProduct = new SellProduct()
+                {
+                    OrderId = _orderId,
+                    ProductId = _id,
+                    Quantity = Convert.ToInt32(addNewOrderNumericUpDown.Value)
+                    
+                    
+                };
+
+                _sellProductCruds.Add(sellProduct);
+                
+
                 MessageBox.Show("Ürün sepete eklendi.");
             }
+        }
+
+        private void choosenOneProductLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
