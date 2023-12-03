@@ -174,6 +174,7 @@
             this.newOrderButton.TabIndex = 7;
             this.newOrderButton.Text = "New Order";
             this.newOrderButton.UseVisualStyleBackColor = false;
+            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
             // label9
             // 

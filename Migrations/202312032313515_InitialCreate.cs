@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class createDb : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
@@ -15,7 +15,7 @@
                         UserId = c.Int(nullable: false),
                         ProductId = c.Int(nullable: false),
                         Quantity = c.Int(nullable: false),
-                        İsDelete = c.Boolean(nullable: false),
+                        IsDelete = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Products", t => t.ProductId, cascadeDelete: true)
@@ -63,7 +63,6 @@
                         ProductId = c.Int(nullable: false),
                         Quantity = c.Int(nullable: false),
                         Price = c.Double(nullable: false),
-                        TotalPrice = c.Double(nullable: false),
                         IsDelete = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -78,8 +77,8 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         UserId = c.Int(nullable: false),
-                        OrderDateTine = c.DateTime(nullable: false),
-                        İsDelete = c.Boolean(nullable: false),
+                        OrderDateTime = c.DateTime(nullable: false),
+                        IsDelete = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: true)

@@ -14,6 +14,20 @@ namespace MarketYönetimSistemi.Entity
         public User User { get; set; }
         public DateTime OrderDateTime { get; set; } = DateTime.Now;
         public bool IsDelete { get; set; }
+
         public List<SellProduct> SellProductList { get; set; }
+
+        public double ThisOrderTotalPrice
+        {
+            get
+            {
+                double total = 0;
+                foreach (var item in SellProductList)
+                {
+                    total += item.TotalPrice;
+                }
+                return total;
+            }
+        }
     }
 }

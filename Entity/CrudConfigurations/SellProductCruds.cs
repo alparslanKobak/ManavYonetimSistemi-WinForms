@@ -52,7 +52,7 @@ namespace MarketYönetimSistemi.Entity.CrudConfigurations
             SellProduct sellProduct = _db.SellProducts.FirstOrDefault(x => x.Id == id);
   
             sellProduct.ProductId = entity.ProductId;
-            sellProduct.TotalPrice = entity.TotalPrice;
+         
             sellProduct.OrderId = entity.OrderId;
             sellProduct.Price = entity.Price;
             sellProduct.Quantity = entity.Quantity;

@@ -23,7 +23,13 @@ namespace MarketYönetimSistemi.Entity
 
         public double Price { get; set; }
 
-        public double TotalPrice { get; set; }
+        public double TotalPrice
+        {
+            get
+            {
+                return Quantity * Price;
+            }
+        }
 
         public bool IsDelete { get; set; }
     }

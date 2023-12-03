@@ -44,5 +44,11 @@ namespace MarketYönetimSistemi
             UserProfileEditForm userProfileEditForm = new UserProfileEditForm();
             userProfileEditForm.Show();
         }
+
+        private void newOrderButton_Click(object sender, EventArgs e)
+        {
+            NewOrderForm newOrderForm = new NewOrderForm();
+            newOrderForm.Show();
+        }
     }
 }
