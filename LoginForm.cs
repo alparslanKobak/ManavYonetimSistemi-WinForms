@@ -55,11 +55,11 @@ namespace MarketYönetimSistemi
                     AdminPanelForm adminPanelForm = new AdminPanelForm();
                     adminPanelForm.Show();
                 }
-                //else
-                //{
-                //    UserPanelForm userPanelForm = new UserPanelForm();
-                //    userPanelForm.Show();
-                //}
+                else
+                {
+                    UserPanelForm userPanelForm = new UserPanelForm();
+                    userPanelForm.Show();
+                }
             }
 
 
