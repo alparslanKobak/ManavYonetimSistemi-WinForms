@@ -44,5 +44,7 @@ namespace MarketYönetimSistemi.FileHelper
             comboBox.DisplayMember = "Name";
             comboBox.ValueMember = "Id";
         }
+
+        
     }
 }

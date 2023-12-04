@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class orderIsStatusEklendi : DbMigration
     {
         public override void Up()
         {
@@ -77,6 +77,7 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         UserId = c.Int(nullable: false),
+                        IsStatus = c.Boolean(nullable: false),
                         OrderDateTime = c.DateTime(nullable: false),
                         IsDelete = c.Boolean(nullable: false),
                     })

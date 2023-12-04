@@ -112,6 +112,7 @@
             this.clearAllCardButton.TabIndex = 8;
             this.clearAllCardButton.Text = "Clear";
             this.clearAllCardButton.UseVisualStyleBackColor = false;
+            this.clearAllCardButton.Click += new System.EventHandler(this.clearAllCardButton_Click);
             // 
             // buyAllCardButton
             // 
@@ -124,6 +125,7 @@
             this.buyAllCardButton.TabIndex = 9;
             this.buyAllCardButton.Text = "Buy";
             this.buyAllCardButton.UseVisualStyleBackColor = false;
+            this.buyAllCardButton.Click += new System.EventHandler(this.buyAllCardButton_Click);
             // 
             // choosenOnePictureBox
             // 

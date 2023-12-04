@@ -7,13 +7,13 @@ namespace MarketYönetimSistemi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class orderIsStatusEklendi : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(orderIsStatusEklendi));
         
         string IMigrationMetadata.Id
         {
-            get { return "202312032313515_InitialCreate"; }
+            get { return "202312040650059_orderIsStatusEklendi"; }
         }
         
         string IMigrationMetadata.Source

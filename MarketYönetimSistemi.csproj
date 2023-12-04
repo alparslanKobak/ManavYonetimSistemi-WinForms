@@ -99,9 +99,9 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202312032313515_InitialCreate.cs" />
-    <Compile Include="Migrations\202312032313515_InitialCreate.designer.cs">
-      <DependentUpon>202312032313515_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202312040650059_orderIsStatusEklendi.cs" />
+    <Compile Include="Migrations\202312040650059_orderIsStatusEklendi.designer.cs">
+      <DependentUpon>202312040650059_orderIsStatusEklendi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewOrderForm.cs">
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312032313515_InitialCreate.resx">
-      <DependentUpon>202312032313515_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312040650059_orderIsStatusEklendi.resx">
+      <DependentUpon>202312040650059_orderIsStatusEklendi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewOrderForm.resx">
       <DependentUpon>NewOrderForm.cs</DependentUpon>

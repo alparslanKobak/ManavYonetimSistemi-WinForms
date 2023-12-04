@@ -12,6 +12,7 @@ namespace MarketYönetimSistemi.Entity
         public int Id { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
+        public bool IsStatus { get; set; } = false;
         public DateTime OrderDateTime { get; set; } = DateTime.Now;
         public bool IsDelete { get; set; }
 
